@@ -1,0 +1,4 @@
+{
+    "watch": ["package.json", "src/"],
+    "ext": "js, css"
+  }

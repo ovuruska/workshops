@@ -11,17 +11,17 @@ class App extends Component{
     }
   }
 
-  refresh = () =>{
+  refresh(){
     this.setState({
       elements:[1,2,2,3,4]
     })
   }
 
-  uploadNumber = (event) => {
+  uploadNumber(event) {
     const {value} = this.state
   }
 
-  updateValue = (event) => {
+  updateValue  (event) {
     this.setState({
       value:event.target.value
     })

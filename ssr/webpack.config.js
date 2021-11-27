@@ -4,7 +4,7 @@ const nodeExternals = require('webpack-node-externals');
 // CommonJS
 module.exports = {
     entry: './src/index.js',
-    watch:true,
+    watch:false,
     target: 'node',
     mode:"development",
 
@@ -18,8 +18,10 @@ module.exports = {
     module: {
         rules: [
             {
-            test: /\.js$/,
-            use: 'babel-loader'
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                options: { presets: ['@babel/env','@babel/preset-react'] }
             }
         ]
     }
