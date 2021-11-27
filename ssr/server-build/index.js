@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// React.createElement(component, props, ...children)\nconst express = __webpack_require__(/*! express */ \"express\");\n\nlet app = express();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("// React.createElement(component, props, ...children)\nconst express = __webpack_require__(/*! express */ \"express\");\n\nconst http = __webpack_require__(/*! http */ \"http\");\n\nconst React = __webpack_require__(/*! react */ \"react\");\n\nconst ReactDOMServer = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nlet app = express();\napp.all(\"/\", (req, res) => {\n  ReactDOMServer.renderToString(React.createElement);\n  res.send(\"Hello World\");\n});\nconst port = process.env.PORT || 8000;\nconst server = http.createServer(app);\nserver.listen(port, \"localhost\", () => {\n  console.log(\"Server started listening on \" + port.toString());\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -105,6 +105,39 @@ eval("// React.createElement(component, props, ...children)\nconst express = __w
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"http\");\n\n//# sourceURL=webpack:///external_%22http%22?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
 
 /***/ })
 
