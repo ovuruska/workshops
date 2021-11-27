@@ -5,6 +5,7 @@ module.exports = {
     entry: './src/index.js',
     watch:true,
     target: 'node',
+    mode:"development",
 
     externals: [nodeExternals()],
 
